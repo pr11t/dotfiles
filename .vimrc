@@ -53,3 +53,4 @@ au BufNewFile, BufRead *.py
 " Run last command in other tmux pane, eg. python %
 " nnoremap <F5> :silent exec "!tmux send-keys -t 1 '!!' Enter"<cr>:redr!<cr>
 nnoremap <F5> :silent exec "!tmux send-keys -t 1 Up Enter"<cr>:redr!<cr>
+nnoremap <C-j> :%!python -m json.tool<cr>
