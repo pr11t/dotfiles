@@ -20,6 +20,8 @@ Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
 " Lint
 Plug 'dense-analysis/ale'
+" Tab autocomplete and more
+Plug 'ervandew/supertab'
 " All of your Plugins must be added before the following line
 call plug#end()
 filetype plugin indent on    " required ??
