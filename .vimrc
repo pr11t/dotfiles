@@ -1,36 +1,24 @@
 set nocompatible              " required
 filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" Install vim-plug
+" curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+"    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
-
-" add all your plugins here (note older versions of Vundle
-" used Bundle instead of Plugin)
+call plug#begin()
 " Python folding
-Plugin 'tmhedberg/SimpylFold'
+Plug 'tmhedberg/SimpylFold'
 " Python auto-indent
-Plugin 'vim-scripts/indentpython.vim'
+Plug 'vim-scripts/indentpython.vim'
 " Autocomplete
-Plugin 'davidhalter/jedi-vim'
+Plug 'davidhalter/jedi-vim'
 " Virtualenv
-Plugin 'jmcantrell/vim-virtualenv'
-" Syntax checker
-"Plugin 'vim-syntastic/syntastic'
-" Python backend for 'syntastic'
-"Plugin 'nvie/vim-flake8'
+Plug 'jmcantrell/vim-virtualenv'
 " File manager
-Plugin 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree'
 " All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-
+call plug#end()
+filetype plugin indent on    " required ??
 " ----------
 " Encoding
 set encoding=utf-8
