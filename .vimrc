@@ -16,6 +16,10 @@ Plug 'davidhalter/jedi-vim'
 Plug 'jmcantrell/vim-virtualenv'
 " File manager
 Plug 'scrooloose/nerdtree'
+" Git
+Plug 'tpope/vim-fugitive'
+" Lint
+Plug 'dense-analysis/ale'
 " All of your Plugins must be added before the following line
 call plug#end()
 filetype plugin indent on    " required ??
