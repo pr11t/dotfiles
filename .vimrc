@@ -40,6 +40,8 @@ set foldmethod=indent
 set foldlevel=99
 " Flag unnessecary whitespace
 au BufRead, BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+" Line numbers
+set number
 " Python
 " PEP 8 indentation
 au BufNewFile, BufRead *.py
@@ -56,3 +58,6 @@ au BufNewFile, BufRead *.py
 " nnoremap <F5> :silent exec "!tmux send-keys -t 1 '!!' Enter"<cr>:redr!<cr>
 nnoremap <F5> :silent exec "!tmux send-keys -t 1 Up Enter"<cr>:redr!<cr>
 nnoremap <C-j> :%!python -m json.tool<cr>
+
+" Jedi conf
+let g:jedi#popup_on_dot = 0
