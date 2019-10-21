@@ -30,7 +30,7 @@ filetype plugin indent on    " required ??
 set encoding=utf-8
 " Enable syntax higlighting
 syntax enable
-" Copy to clipboard
+" Copy to system (X11) clipboard (+ register)
 " requires vim with clipboard support, had to install vim-gnome from apt
 " vim --version | grep clipboard
 set clipboard=unnamedplus
@@ -54,8 +54,8 @@ au BufNewFile, BufRead *.py
 
 " Shortcuts
 " Run last command in other tmux pane, eg. python %
-" nnoremap <F5> :silent exec "!tmux send-keys -t 1 '!!' Enter"<cr>:redr!<cr>
 nnoremap <F5> :silent exec "!tmux send-keys -t 1 Up Enter"<cr>:redr!<cr>
+" Format json in open file using python
 nnoremap <C-j> :%!python -m json.tool<cr>
 
 " Jedi conf
