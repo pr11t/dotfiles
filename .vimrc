@@ -60,3 +60,6 @@ nnoremap <C-j> :%!python -m json.tool<cr>
 
 " Jedi conf
 let g:jedi#popup_on_dot = 0
+
+" nerdtree
+map <C-e> :NERDTreeToggle<CR>
