@@ -30,11 +30,10 @@ filetype plugin indent on    " required ??
 set encoding=utf-8
 " Enable syntax higlighting
 syntax enable
-" Split navigation
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+" Copy to clipboard
+" requires vim with clipboard support, had to install vim-gnome from apt
+" vim --version | grep clipboard
+set clipboard=unnamedplus
 " Code folding
 set foldmethod=indent
 set foldlevel=99
