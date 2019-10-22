@@ -16,11 +16,13 @@ fi
 HISTCONTROL=ignoreboth
 # append to the history file, don't overwrite it
 shopt -s histappend
+# Enable timestamp for history
+HISTTIMEFORMAT="%Y/%m/%d %H:%M:%S: "
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=200000
 HISTFILESIZE=200000
-# Allow ctrl-S for history nav by disabling xon/xoff
-stty -ixon
+# Disable ctrl+S and ctrl+Q (unlocks ctrl+S for history navigation with ctrl+R)
+stty -ixon -ixoff
 
 ## Terminal ##
 # check the window size after each command and, if necessary,
@@ -73,5 +75,4 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-
 
