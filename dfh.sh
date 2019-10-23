@@ -1,8 +1,8 @@
 #!/bin/bash
-set -x
 # Dotfiles Helper Script #
 
 force=false
+lnflags="-s"
 
 while getopts ":f" opt; do
   case $opt in
@@ -24,14 +24,15 @@ for dir in */; do
 		if [ -f "$target" ]; then
 			# File exists
 			if [ $force = true ]; then
-				if [ -f "$target.backup" ]; then
-					echo "Backup file $target.backup already exists, cant continue..."
-					break
+				if [ -h "$target" ]; then
+					# It's a symlink, we don't care about backing it up
+					lnflags="-sf"
 				else
-					mv "$target" "$target.backup"
+					# Not a symlink, make a backup just in case
+					lnflags="-sfb"
 				fi
 			fi
 		fi
-		ln -s "$(realpath $conf)" "$target"
+		ln "$lnflags" "$(realpath $conf)" "$target" || echo "Linking failed, you can use -f to force"
 	done;
 done;
