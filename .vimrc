@@ -22,8 +22,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'dense-analysis/ale'
 " Tab autocomplete and more
 Plug 'ervandew/supertab'
-" Color theme
-Plug 'danilo-augusto/vim-afterglow'
 
 call plug#end()
 filetype plugin indent on " :help :filetype-overview
@@ -59,7 +57,7 @@ au BufNewFile, BufRead *.py
     \ set fileformat=unix
 
 " Theme
-colorscheme afterglow
+colorscheme slate
 
 " Shortcuts
 " Run last command in other tmux pane, eg. python %
