@@ -22,18 +22,23 @@ Plug 'tpope/vim-fugitive'
 Plug 'dense-analysis/ale'
 " Tab autocomplete and more
 Plug 'ervandew/supertab'
-" All of your Plugins must be added before the following line
+" Color theme
+Plug 'danilo-augusto/vim-afterglow'
+
 call plug#end()
-filetype plugin indent on    " required ??
+filetype plugin indent on " :help :filetype-overview
 " ----------
 " Encoding
 set encoding=utf-8
+
 " Enable syntax higlighting
 syntax enable
+
 " Copy to system (X11) clipboard (+ register)
 " requires vim with clipboard support, had to install vim-gnome from apt
 " vim --version | grep clipboard
 set clipboard=unnamedplus
+
 " Code folding
 set foldmethod=indent
 set foldlevel=99
@@ -41,6 +46,7 @@ set foldlevel=99
 au BufRead, BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 " Line numbers
 set number
+
 " Python
 " PEP 8 indentation
 au BufNewFile, BufRead *.py
@@ -51,6 +57,9 @@ au BufNewFile, BufRead *.py
     \ set expandtab
     \ set autoindent
     \ set fileformat=unix
+
+" Theme
+colorscheme afterglow
 
 " Shortcuts
 " Run last command in other tmux pane, eg. python %
