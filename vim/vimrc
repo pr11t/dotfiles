@@ -59,7 +59,10 @@ au BufNewFile, BufRead *.py
 " yaml
 au! BufNewFile,BufReadPost *.{yaml,yml} set filetype=yaml foldmethod=indent
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
-
+" yaml ale
+" g:ale_yaml_yamllint_executable
+" TODO: this should be formatted beter
+let g:ale_yaml_yamllint_options = '-d "{extends: relaxed, rules: {brackets: {min-spaces-inside: 1, max-spaces-inside: 1}}}"'
 
 " Theme
 colorscheme slate
