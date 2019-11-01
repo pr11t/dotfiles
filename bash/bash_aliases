@@ -6,6 +6,7 @@ alias h='history'
 alias tailf='tail -f'
 alias hs='history | grep'
 alias duh='du -hs * | sort -h'
+alias ilm='curl wttr.in'
 
 # Python virtualenv management
 alias lsenv='_envman ls'
