@@ -24,6 +24,9 @@ HISTFILESIZE=200000
 # Disable ctrl+S and ctrl+Q (unlocks ctrl+S for history navigation with ctrl+R)
 stty -ixon -ixoff
 
+## PATH ##
+PATH=$PATH:$HOME/.local/bin
+
 ## Terminal ##
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
