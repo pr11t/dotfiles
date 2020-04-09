@@ -21,6 +21,8 @@ HISTTIMEFORMAT="%Y/%m/%d %H:%M:%S: "
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=200000
 HISTFILESIZE=200000
+# Prepend history -a to prompt command to save history after every command
+PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
 # Disable ctrl+S and ctrl+Q (unlocks ctrl+S for history navigation with ctrl+R)
 stty -ixon -ixoff
 
@@ -64,6 +66,9 @@ export LESS_TERMCAP_se=$'\E[0m'        # reset reverse video
 export LESS_TERMCAP_us=$'\E[1;32m'     # begin underline
 export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
 # and so on
+
+# Disable telemetry for dotnet
+DOTNET_CLI_TELEMETRY_OPTOUT=1
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
