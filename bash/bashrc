@@ -27,7 +27,7 @@ PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
 stty -ixon -ixoff
 
 ## PATH ##
-PATH=$PATH:$HOME/.local/bin
+PATH=$PATH:$HOME/.local/bin:/usr/local/go/bin
 
 ## Terminal ##
 # check the window size after each command and, if necessary,
